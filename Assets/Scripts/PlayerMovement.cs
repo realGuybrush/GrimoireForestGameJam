@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rigidBody;
 
     [SerializeField]
+    private Health health;
+    
+    [SerializeField]
     private float speed;
 
     [SerializeField]
@@ -56,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
         key2.started += Handle2;
         key3.started += Handle3;
         key4.started += Handle4;
+        health.OnDie += Die;
     }
     
     private void Update()
@@ -78,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
     private void HandleAttack(InputAction.CallbackContext callbackContext)
     {
         if(activeSpellIndex < spells.Count && acquiredSpells[activeSpellIndex])
-            spells[activeSpellIndex]?.Cast(cursor.position, transform);
+            spells[activeSpellIndex]?.Cast(cursor.position, transform, gameObject.GetHashCode());
     }
     private void Handle1(InputAction.CallbackContext callbackContext)
     {
@@ -109,6 +113,11 @@ public class PlayerMovement : MonoBehaviour
             acquiredSpells[index] = true;
     }
 
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
+
     private void OnDisable()
     {
         move.performed -= HandleMove;
@@ -119,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
         key2.started -= Handle2;
         key3.started -= Handle3;
         key4.started -= Handle4;
+        health.OnDie -= Die;
         move?.Disable();
         action?.Disable();
         attack?.Disable();
@@ -127,4 +137,6 @@ public class PlayerMovement : MonoBehaviour
         key3?.Disable();
         key4?.Disable();
     }
+
+    public bool Hidden => false;
 }
