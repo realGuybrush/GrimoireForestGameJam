@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -27,7 +26,7 @@ public class HunterMovement : BasicEnemyMovement
                 dashTimer = dashCD;
             } else
             {
-                body.linearVelocity = intermittentFollowPosition - transform.position;
+                body.linearVelocity = (intermittentFollowPosition - transform.position).normalized * speed;
                 Attack();
             }
         } else
