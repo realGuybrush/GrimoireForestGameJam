@@ -35,6 +35,10 @@ public class PlayerMovement : MonoBehaviour
 
     private int activeSpellIndex;
 
+    private List<float> spellTimers = new List<float>();
+
+    private List<float> spellCDs = new List<float>();
+
     private void OnEnable()
     {
         move = playerInput.actions.FindAction("Move");
@@ -60,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
         key3.started += Handle3;
         key4.started += Handle4;
         health.OnDie += Die;
+        SetSpellCDs();
     }
     
     private void Update()
@@ -67,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
         if (cursor.transform.position.x > transform.position.x && !lookingRight ||
             cursor.transform.position.x < transform.position.x && lookingRight)
             Flip();
+        UpdateSpellCDs();
     }
 
     private void HandleMove(InputAction.CallbackContext callbackContext)
@@ -81,8 +87,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleAttack(InputAction.CallbackContext callbackContext)
     {
-        if(activeSpellIndex < spells.Count && acquiredSpells[activeSpellIndex])
+        if (activeSpellIndex < spells.Count && acquiredSpells[activeSpellIndex] && spellTimers[activeSpellIndex] <= 0f)
+        {
             spells[activeSpellIndex]?.Cast(cursor.position, transform, gameObject.GetHashCode());
+            spellTimers[activeSpellIndex] = spellCDs[activeSpellIndex];
+        }
     }
     private void Handle1(InputAction.CallbackContext callbackContext)
     {
@@ -105,6 +114,22 @@ public class PlayerMovement : MonoBehaviour
     {
         image.eulerAngles = new Vector3(0f, image.eulerAngles.y > 1f?0f:180f, 0f);
         lookingRight = !lookingRight;
+    }
+
+    private void SetSpellCDs()
+    {
+        foreach (var spell in spells)
+        {
+            spellCDs.Add(spell.CD);
+            spellTimers.Add(0);
+        }
+    }
+
+    private void UpdateSpellCDs()
+    {
+        for(int i = 0; i < spellTimers.Count; i++)
+            if (spellTimers[i] > 0)
+                spellTimers[i] -= Time.deltaTime; 
     }
 
     public void GetSpell(int index)

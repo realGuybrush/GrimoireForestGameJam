@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class BasicSpell : MonoBehaviour
@@ -8,6 +7,9 @@ public class BasicSpell : MonoBehaviour
 
     [SerializeField]
     private int index;
+
+    [SerializeField]
+    private float cd;
     
     public virtual void Cast(Vector3 cursorPos, Transform playerPos, int ignore)
     {
@@ -21,4 +23,6 @@ public class BasicSpell : MonoBehaviour
         player.GetSpell(index);
         Destroy(gameObject);
     }
+
+    public float CD => cd;
 }
