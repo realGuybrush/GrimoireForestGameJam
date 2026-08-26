@@ -91,7 +91,7 @@ public class BasicEnemyMovement : MonoBehaviour
         if (attackTimer > 0) attackTimer -= Time.deltaTime;
     }
 
-    protected void Attack()
+    protected virtual void Attack()
     {
         if (attackTimer > 0) return;
         Instantiate(bite, transform.position, new Quaternion()).Init(followPosition - transform.position, gameObject.GetHashCode());
@@ -106,6 +106,11 @@ public class BasicEnemyMovement : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+    }
+    
+    public void BiterSetActive(bool value)
+    {
+        biter.gameObject.SetActive(value);
     }
 
     private void OnDestroy()
