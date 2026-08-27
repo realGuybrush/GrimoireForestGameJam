@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private Rigidbody2D rigidBody;
+
+    [SerializeField]
+    private Animator animator;
 
     [SerializeField]
     private Health health;
@@ -45,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     private SpeechBubble speechBubble;
 
     [SerializeField]
-    private Exit exit;
+    private Exit exit, deathBed;
 
     private void OnEnable()
     {
@@ -86,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
     private void HandleMove(InputAction.CallbackContext callbackContext)
     {
         rigidBody.linearVelocity = move.ReadValue<Vector2>() * speed;
+        animator.SetBool("Walk", rigidBody.linearVelocity.magnitude > 0f);
     }
 
     private void HandleInteraction(InputAction.CallbackContext callbackContext)
@@ -164,7 +169,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        animator.SetBool("Die", true);
+        Instantiate(deathBed, transform.position, new Quaternion());
     }
 
     private void OnDisable()
