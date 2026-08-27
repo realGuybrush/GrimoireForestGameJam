@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: b943d5763f5275146960f1c9c51cffd6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -134,10 +134,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   damage: 15
-  destroyOnHit: 0
+  destroyOnHit: 1
   ignore: 0
-  lifeTime: 0.1
-  speed: 3
+  lifeTime: 0.5
+  speed: 5
   body: {fileID: 4995214230355251399}
 --- !u!58 &-3498363061354751106
 CircleCollider2D:

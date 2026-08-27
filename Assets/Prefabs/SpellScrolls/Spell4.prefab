@@ -105,7 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801f52e716e50c84fa2b295a547bf73b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Heal
-  projectile: {fileID: 4156191870124028868, guid: 366f47d315e84d143b6f16c4baa9e0ad, type: 3}
+  itemIndex: 0
+  projectile: {fileID: 2141883458442080758, guid: 366f47d315e84d143b6f16c4baa9e0ad, type: 3}
   index: 3
   cd: 4
 --- !u!61 &914927884189061873

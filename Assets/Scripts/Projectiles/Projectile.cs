@@ -3,13 +3,13 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField]
-    private float damage;
+    protected float damage;
     
     [SerializeField]
     private bool destroyOnHit;
     
     [SerializeField]
-    private int ignore;
+    protected int ignore;
     
     [SerializeField]
     private float lifeTime, speed;

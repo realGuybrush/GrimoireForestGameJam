@@ -690,7 +690,7 @@ MonoBehaviour:
   stealthTrig: {fileID: 2121754562}
   unseeTrig: {fileID: 1732132691}
   biter: {fileID: 594447353}
-  attackCD: 3
+  attackCD: 0.75
   bite: {fileID: 2842902042010254085, guid: 047374778c440f6429838fa18c23819f, type: 3}
   drop: {fileID: 1959275291952239030, guid: 2b8b9d4d5c745444a938a893e4b53229, type: 3}
   dropChance: 100
@@ -1096,7 +1096,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
