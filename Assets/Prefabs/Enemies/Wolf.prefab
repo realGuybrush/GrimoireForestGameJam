@@ -223,13 +223,15 @@ MonoBehaviour:
   health: {fileID: 8184669613925218931}
   defaultWalkDistance: 3
   chanceToRandomWalk: 1
-  speed: 2
+  speed: 5
   trig: {fileID: 4466190649163968629}
   stealthTrig: {fileID: 5913558680583573980}
   unseeTrig: {fileID: 4647360471675934850}
   biter: {fileID: 791493329610601222}
   attackCD: 3
   bite: {fileID: 5944128605494756527, guid: 63f9d6c8d948d264c9db05648ebf457c, type: 3}
+  drop: {fileID: 1959275291952239030, guid: 87f9a91c349f8034e92150ef116ddc9e, type: 3}
+  dropChance: 100
 --- !u!61 &1118559400507155275
 BoxCollider2D:
   m_ObjectHideFlags: 0

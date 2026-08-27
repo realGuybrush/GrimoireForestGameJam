@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -32,6 +31,12 @@ public class BasicEnemyMovement : MonoBehaviour
 
     [SerializeField]
     protected Projectile bite;
+
+    [SerializeField]
+    private Item drop;
+
+    [SerializeField]
+    private float dropChance;
 
     private void Awake()
     {
@@ -105,9 +110,16 @@ public class BasicEnemyMovement : MonoBehaviour
 
     private void Die()
     {
+        Drop();
         Destroy(gameObject);
     }
-    
+
+    private void Drop()
+    {
+        if (Random.Range(0, 100) < dropChance)
+            Instantiate(drop, transform.position, new Quaternion());
+    }
+
     public void BiterSetActive(bool value)
     {
         biter.gameObject.SetActive(value);

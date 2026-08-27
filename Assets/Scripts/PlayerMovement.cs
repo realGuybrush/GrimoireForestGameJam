@@ -39,6 +39,14 @@ public class PlayerMovement : MonoBehaviour
 
     private List<float> spellCDs = new List<float>();
 
+    private List<ItemEnum> items = new List<ItemEnum>();
+
+    [SerializeField]
+    private SpeechBubble speechBubble;
+
+    [SerializeField]
+    private Exit exit;
+
     private void OnEnable()
     {
         move = playerInput.actions.FindAction("Move");
@@ -137,6 +145,11 @@ public class PlayerMovement : MonoBehaviour
         if(index < acquiredSpells.Count)
             acquiredSpells[index] = true;
     }
+    
+    public void GetItem(ItemEnum newItem)
+    {
+        items.Add(newItem);
+    }
 
     private void Die()
     {
@@ -164,4 +177,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public bool Hidden => false;
+
+    public List<ItemEnum> Items => items;
 }

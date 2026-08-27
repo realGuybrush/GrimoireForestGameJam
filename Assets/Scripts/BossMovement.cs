@@ -3,33 +3,21 @@ using UnityEngine;
 public class BossMovement : MonoBehaviour
 {
     [SerializeField]
-    private PlayerSeekerTrigger talk, take;
-
+    private QuestControls quests;
+    
     [SerializeField]
     private Health health;
 
     [SerializeField]
     private BasicEnemyMovement controls;
-
+    
     private int aggro = 1;
 
     private void Start()
     {
-        talk.OnPlayerEnter += Talk;
-        take.OnPlayerEnter += TakeItem;
         health.SetPlotArmor(true);
         controls.BiterSetActive(false);
         controls.enabled = false;
-    }
-
-    private void Talk(PlayerMovement player)
-    {
-        Debug.Log("Hello.");
-    }
-    
-    private void TakeItem(PlayerMovement player)
-    {
-        Debug.Log("Thank you.");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -37,20 +25,15 @@ public class BossMovement : MonoBehaviour
         if (other.GetComponent<Projectile>() != null) aggro--;
         if (aggro == 0)
         {
-            //say FU
+            quests.TellHimISaidF___YOU();
         }
         if (aggro == -1)
         {
+            quests.TurnOffTriggers();
             health.SetPlotArmor(false);
             controls.enabled = true;
             controls.BiterSetActive(true);
             enabled = false;
         }
-    }
-
-    private void OnDestroy()
-    {
-        talk.OnPlayerEnter -= Talk;
-        take.OnPlayerEnter -= TakeItem;
     }
 }

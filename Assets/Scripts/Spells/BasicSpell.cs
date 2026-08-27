@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BasicSpell : MonoBehaviour
+public class BasicSpell : Item
 {
     [SerializeField]
     protected Projectile projectile;
@@ -16,7 +16,7 @@ public class BasicSpell : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected override void TriggerAction(Collider2D other)
     {
         var player = other.GetComponent<PlayerMovement>();
         if (player == null) return;

@@ -142,13 +142,15 @@ MonoBehaviour:
   health: {fileID: 5028684642912678608}
   defaultWalkDistance: 0
   chanceToRandomWalk: 0
-  speed: 5
+  speed: 7
   trig: {fileID: 7055849742919728896}
   stealthTrig: {fileID: 5300517890538372339}
   unseeTrig: {fileID: 8291188192098483928}
   biter: {fileID: 7578474374109420043}
   attackCD: 1
   bite: {fileID: 5944128605494756527, guid: 58c9720fbd32d1445995ba0bde76f85f, type: 3}
+  drop: {fileID: 1959275291952239030, guid: 89d1138b1b4f3be40a811b8fb20f17f1, type: 3}
+  dropChance: 100
   circlingDistance: 5
 --- !u!114 &5028684642912678608
 MonoBehaviour:
