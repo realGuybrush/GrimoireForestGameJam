@@ -22,13 +22,17 @@ public class BossMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<Projectile>() != null) aggro--;
-        if (aggro == 0)
+        if (other.GetComponent<Projectile>() != null) 
         {
-            quests.TellHimISaidF___YOU();
+            aggro--;
+            if (aggro == 0)
+            {
+                quests.TellHimISaidF___YOU();
+            }
         }
         if (aggro == -1)
         {
+            //quests.ClearSpeech();
             quests.TurnOffTriggers();
             health.SetPlotArmor(false);
             controls.enabled = true;

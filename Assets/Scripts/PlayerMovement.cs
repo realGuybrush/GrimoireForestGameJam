@@ -149,6 +149,17 @@ public class PlayerMovement : MonoBehaviour
     public void GetItem(ItemEnum newItem)
     {
         items.Add(newItem);
+        CheckItems();
+    }
+
+    private void CheckItems()
+    {
+        if (items.Contains(ItemEnum.CatClaw) && items.Contains(ItemEnum.CrowBeak) &&
+            items.Contains(ItemEnum.HunterMonocle) && items.Contains(ItemEnum.SkeletonSkull))
+        {
+            Instantiate(exit, Vector3.zero, new Quaternion());
+            speechBubble.ShowMessage("What was that in the hut?");
+        }
     }
 
     private void Die()

@@ -23,6 +23,7 @@ public class QuestControls : MonoBehaviour
     private void Awake()
     {
         talk.OnPlayerEnter += Talk;
+        talk.OnPlayerLeave += ClearSpeech;
         take.OnPlayerEnter += TakeItem;
     }
 
@@ -31,6 +32,8 @@ public class QuestControls : MonoBehaviour
         speechBubble.ShowMessage(quests[questStep].GetText());
         if (quests[questStep].ItemName == "")
         {
+            if(quests[questStep].Prize != null)
+                Instantiate(quests[questStep].Prize, prizeSpawn.position, new Quaternion());
             questStep++;
             if(questStep < quests.Count)
                 speechBubble.ShowMessage(quests[questStep].GetText());
@@ -67,9 +70,15 @@ public class QuestControls : MonoBehaviour
         speechBubble.ShowMessage("Che fai? Fuck you!", true);
     }
 
+    public void ClearSpeech()
+    {
+        speechBubble.ShowMessage(" ", true);
+    }
+
     private void OnDestroy()
     {
         talk.OnPlayerEnter -= Talk;
+        talk.OnPlayerLeave -= ClearSpeech;
         take.OnPlayerEnter -= TakeItem;
     }
 }
