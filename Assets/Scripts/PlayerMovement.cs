@@ -180,10 +180,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Die()
     {
-        enabled = false;
+        rigidBody.linearVelocity = Vector2.zero;
         animator.SetBool("Die", true);
         armsImage.gameObject.SetActive(false);
         Instantiate(deathBed, transform.position, new Quaternion());
+        enabled = false;
     }
 
     private void OnDisable()
