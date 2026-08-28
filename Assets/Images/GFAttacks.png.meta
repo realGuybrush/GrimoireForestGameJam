@@ -1,0 +1,738 @@
+fileFormatVersion: 2
+guid: b2954251930103444a5ed476b1299d23
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2081216863896303532
+    second: GFAttacks_0
+  - first:
+      213: -4812079387569340130
+    second: GFAttacks_1
+  - first:
+      213: -4365082917116444414
+    second: GFAttacks_2
+  - first:
+      213: -3882962909103653437
+    second: GFAttacks_3
+  - first:
+      213: -7780287384120058939
+    second: GFAttacks_4
+  - first:
+      213: 1593757757815291183
+    second: GFAttacks_5
+  - first:
+      213: 30706477437933295
+    second: GFAttacks_6
+  - first:
+      213: 5192958122819547307
+    second: GFAttacks_7
+  - first:
+      213: 7370994572678771926
+    second: GFAttacks_8
+  - first:
+      213: -2820755636709699103
+    second: GFAttacks_9
+  - first:
+      213: 172372671529232839
+    second: GFAttacks_10
+  - first:
+      213: -1228943450930918247
+    second: GFAttacks_11
+  - first:
+      213: 9060923487859334287
+    second: GFAttacks_12
+  - first:
+      213: 1619566340863187843
+    second: GFAttacks_13
+  - first:
+      213: 3211404638530207550
+    second: GFAttacks_14
+  - first:
+      213: -673524723770741925
+    second: GFAttacks_15
+  - first:
+      213: 6708946715231411479
+    second: GFAttacks_16
+  - first:
+      213: -8183669372851653935
+    second: GFAttacks_17
+  - first:
+      213: -8629110984532862962
+    second: GFAttacks_18
+  - first:
+      213: -2533971945058149343
+    second: GFAttacks_19
+  - first:
+      213: -379153621568313088
+    second: GFAttacks_20
+  - first:
+      213: -7813246529124953894
+    second: GFAttacks_21
+  - first:
+      213: -7639627453064670378
+    second: GFAttacks_22
+  - first:
+      213: -8484271977804015282
+    second: GFAttacks_23
+  - first:
+      213: -7604932901811861966
+    second: GFAttacks_24
+  - first:
+      213: -8261631454136839102
+    second: GFAttacks_25
+  - first:
+      213: 5370377031715452044
+    second: GFAttacks_26
+  - first:
+      213: -7228742898018492372
+    second: GFAttacks_27
+  - first:
+      213: -2145193547695966914
+    second: GFAttacks_28
+  - first:
+      213: 613160698062296102
+    second: GFAttacks_29
+  - first:
+      213: -1285379059261238966
+    second: GFAttacks_30
+  - first:
+      213: 6231734491752727355
+    second: GFAttacks_31
+  - first:
+      213: 7350519221146074344
+    second: GFAttacks_32
+  - first:
+      213: -6382297533428225504
+    second: GFAttacks_33
+  - first:
+      213: -7522669395193060341
+    second: GFAttacks_34
+  - first:
+      213: 1809034111881106278
+    second: GFAttacks_35
+  - first:
+      213: 9108137082771334019
+    second: GFAttacks_36
+  - first:
+      213: -7588422808604991323
+    second: GFAttacks_37
+  - first:
+      213: -133824976257427416
+    second: GFAttacks_38
+  - first:
+      213: -3305075370505764155
+    second: GFAttacks_39
+  - first:
+      213: 5048935726805590664
+    second: GFAttacks_40
+  - first:
+      213: 6679358578393173277
+    second: GFAttacks_41
+  - first:
+      213: 4105870546381600230
+    second: GFAttacks_42
+  - first:
+      213: -8020456221957202926
+    second: GFAttacks_43
+  - first:
+      213: -6095740068994809089
+    second: GFAttacks_44
+  - first:
+      213: -4670746288446509872
+    second: GFAttacks_45
+  - first:
+      213: -3761772285479863214
+    second: GFAttacks_46
+  - first:
+      213: -1583172025839718755
+    second: GFAttacks_47
+  - first:
+      213: -1768921142368602426
+    second: GFAttacks_48
+  - first:
+      213: 6320175492708839025
+    second: GFAttacks_49
+  - first:
+      213: -372227989399699010
+    second: GFAttacks_50
+  - first:
+      213: 6361850406157539197
+    second: GFAttacks_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GFAttacks_RabbitBite1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45888eef9480e13e0800000000000000
+      internalID: -2081216863896303532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_RabbitBite2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1143f0ea4f083db0800000000000000
+      internalID: -4812079387569340130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_RabbitBite3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201062ec63c1c63c0800000000000000
+      internalID: -4365082917116444414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_RabbitBite4
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cdfbd69ec1fc1ac0800000000000000
+      internalID: -3882962909103653437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_WolfBite1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb121b88ddd60490800000000000000
+      internalID: -7780287384120058939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_WolfBite2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d7a949c3a2e1610800000000000000
+      internalID: 1593757757815291183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_WolfBite3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe6ddf7e0671d6000800000000000000
+      internalID: 30706477437933295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_WolfBite4
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba0732436e7111840800000000000000
+      internalID: 5192958122819547307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_WolfBite5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4b9d9b2880b4660800000000000000
+      internalID: 7370994572678771926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_OwlBite1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1dcb381b9aad8d0800000000000000
+      internalID: -2820755636709699103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_OwlBite2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c92c7f0804646200800000000000000
+      internalID: 172372671529232839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_OwlBite3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c483e417ae1fee0800000000000000
+      internalID: -1228943450930918247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_OwlBite4
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c59d6c7eddebd70800000000000000
+      internalID: 9060923487859334287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_CatClaws1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b5455910bd97610800000000000000
+      internalID: 1619566340863187843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_CatClaws2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f72a50183319c20800000000000000
+      internalID: 3211404638530207550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_CatClaws3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ba33c05d827a6f0800000000000000
+      internalID: -673524723770741925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_CatClaws4
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d5462fd77fa1d50800000000000000
+      internalID: 6708946715231411479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_CatClaws5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2fee77014cd6e80800000000000000
+      internalID: -8183669372851653935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GFAttacks_Bullet
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f23a25ccaf5fcf4981d52d7a2a8ebf4
+      internalID: 379009133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1eff92f8d90b6c94badafdfa8aa53d48
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":100.0,"y":100.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      GFAttacks_Bullet: 379009133
+      GFAttacks_CatClaws1: 1619566340863187843
+      GFAttacks_CatClaws2: 3211404638530207550
+      GFAttacks_CatClaws3: -673524723770741925
+      GFAttacks_CatClaws4: 6708946715231411479
+      GFAttacks_CatClaws5: -8183669372851653935
+      GFAttacks_OwlBite1: -2820755636709699103
+      GFAttacks_OwlBite2: 172372671529232839
+      GFAttacks_OwlBite3: -1228943450930918247
+      GFAttacks_OwlBite4: 9060923487859334287
+      GFAttacks_RabbitBite1: -2081216863896303532
+      GFAttacks_RabbitBite2: -4812079387569340130
+      GFAttacks_RabbitBite3: -4365082917116444414
+      GFAttacks_RabbitBite4: -3882962909103653437
+      GFAttacks_WolfBite1: -7780287384120058939
+      GFAttacks_WolfBite2: 1593757757815291183
+      GFAttacks_WolfBite3: 30706477437933295
+      GFAttacks_WolfBite4: 5192958122819547307
+      GFAttacks_WolfBite5: 7370994572678771926
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

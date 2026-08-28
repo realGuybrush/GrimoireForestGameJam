@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rigidBody;
 
     [SerializeField]
-    private Animator animator;
+    private Animator animator, armsAnimator;
 
     [SerializeField]
     private Health health;
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private bool lookingRight;
 
     [SerializeField]
-    private Transform image;
+    private Transform image, armsImage;
 
     [SerializeField]
     private Transform cursor;
@@ -91,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rigidBody.linearVelocity = move.ReadValue<Vector2>() * speed;
         animator.SetBool("Walk", rigidBody.linearVelocity.magnitude > 0f);
+        armsAnimator.SetBool("Walk", rigidBody.linearVelocity.magnitude > 0f);
     }
 
     private void HandleInteraction(InputAction.CallbackContext callbackContext)
@@ -102,10 +103,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if (activeSpellIndex < spells.Count && acquiredSpells[activeSpellIndex] && spellTimers[activeSpellIndex] <= 0f)
         {
+            armsAnimator.SetBool("Cast", true);
             spells[activeSpellIndex]?.Cast(cursor.position, transform, gameObject.GetHashCode());
             spellTimers[activeSpellIndex] = spellCDs[activeSpellIndex];
+            StartCoroutine("StopCast");
         }
     }
+
+    private IEnumerator StopCast()
+    {
+        yield return new WaitForSeconds(1f);
+        armsAnimator.SetBool("Cast", false);
+    }
+
     private void Handle1(InputAction.CallbackContext callbackContext)
     {
         activeSpellIndex = 0;
@@ -126,6 +136,7 @@ public class PlayerMovement : MonoBehaviour
     private void Flip()
     {
         image.eulerAngles = new Vector3(0f, image.eulerAngles.y > 1f?0f:180f, 0f);
+        armsImage.eulerAngles = new Vector3(0f, armsImage.eulerAngles.y > 1f?0f:180f, 0f);
         lookingRight = !lookingRight;
     }
 
@@ -169,8 +180,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Die()
     {
-        //Destroy(gameObject);
+        enabled = false;
         animator.SetBool("Die", true);
+        armsImage.gameObject.SetActive(false);
         Instantiate(deathBed, transform.position, new Quaternion());
     }
 

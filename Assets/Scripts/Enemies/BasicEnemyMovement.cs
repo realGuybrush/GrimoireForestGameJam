@@ -4,7 +4,13 @@ using Random = UnityEngine.Random;
 public class BasicEnemyMovement : MonoBehaviour
 {
     [SerializeField]
+    protected Animator animator;
+    
+    [SerializeField]
     protected Rigidbody2D body;
+
+    [SerializeField]
+    private Transform image;
 
     [SerializeField]
     private Health health;
@@ -38,6 +44,9 @@ public class BasicEnemyMovement : MonoBehaviour
     [SerializeField]
     private float dropChance;
 
+    [SerializeField]
+    private bool lookingRight;
+
     private void Awake()
     {
         trig.OnPlayerEnter += SetPlayerIfNotHidden;
@@ -51,8 +60,14 @@ public class BasicEnemyMovement : MonoBehaviour
     private void Update()
     {
         ChooseFollowPosition();
-        if ((transform.position - followPosition).magnitude > 0.1f)
+        if ((transform.position - followPosition).magnitude > 0.5f)
+        {
             FollowPoint();
+            animator.SetBool("Move", true);
+        }
+        else
+            animator.SetBool("Move", false);
+        SetDirection();
         AttackCDTimer();
     }
 
@@ -94,6 +109,18 @@ public class BasicEnemyMovement : MonoBehaviour
     private void AttackCDTimer()
     {
         if (attackTimer > 0) attackTimer -= Time.deltaTime;
+    }
+
+    private void SetDirection()
+    {
+        if (body.linearVelocityX > 0 && !lookingRight || body.linearVelocityX < 0 && lookingRight)
+            Flip();
+    }
+
+    private void Flip()
+    {
+        image.eulerAngles = new Vector3(0f, image.eulerAngles.y > 1f?0f:180f, 0f);
+        lookingRight = !lookingRight;
     }
 
     protected virtual void Attack()

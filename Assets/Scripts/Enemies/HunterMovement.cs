@@ -21,6 +21,7 @@ public class HunterMovement : BasicEnemyMovement
         {
             if((intermittentFollowPosition - transform.position).magnitude < 0.3f)
             {
+                body.linearVelocity = Vector2.zero;
                 intermittentFollowPosition = new Vector3(followPosition.x + Random.Range(chaseDistanceMin, chaseDistanceMax),
                 followPosition.y + Random.Range(chaseDistanceMin, chaseDistanceMax));
                 dashTimer = dashCD;
