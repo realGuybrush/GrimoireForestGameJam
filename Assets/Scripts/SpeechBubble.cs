@@ -58,5 +58,12 @@ public class SpeechBubble : MonoBehaviour
         }
     }
 
+    public void Skip()
+    {
+        timer = 0.1f;
+    }
+
+    public bool IsTalking => timer > 0;
+
     public bool HasFutureText => futureMessages.Count > 0;
 }

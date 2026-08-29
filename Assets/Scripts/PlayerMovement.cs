@@ -105,19 +105,23 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleInteraction(InputAction.CallbackContext callbackContext)
     {
-        Debug.Log("E");
+        if (speechBubble.IsTalking)
+            speechBubble.Skip();
     }
 
     private void HandleAttack(InputAction.CallbackContext callbackContext)
     {
-        if (activeSpellIndex < spells.Count && acquiredSpells[activeSpellIndex] && spellTimers[activeSpellIndex] <= 0f)
-        {
-            spellManager.CastSpell(activeSpellIndex);
-            armsAnimator.SetBool("Cast", true);
-            spells[activeSpellIndex]?.Cast(cursor.position, transform, gameObject.GetHashCode());
-            spellTimers[activeSpellIndex] = spellCDs[activeSpellIndex];
-            StartCoroutine("StopCast");
-        }
+        if (speechBubble.IsTalking)
+            speechBubble.Skip();
+        else
+            if (activeSpellIndex < spells.Count && acquiredSpells[activeSpellIndex] && spellTimers[activeSpellIndex] <= 0f)
+            {
+                spellManager.CastSpell(activeSpellIndex);
+                armsAnimator.SetBool("Cast", true);
+                spells[activeSpellIndex]?.Cast(cursor.position, transform, gameObject.GetHashCode());
+                spellTimers[activeSpellIndex] = spellCDs[activeSpellIndex];
+                StartCoroutine("StopCast");
+            }
     }
 
     private IEnumerator StopCast()
