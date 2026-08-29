@@ -175,7 +175,7 @@ MonoBehaviour:
   attackCD: 3
   bite: {fileID: 5944128605494756527, guid: 86929b77695db3943bf07e6a7e93f9f3, type: 3}
   drop: {fileID: 1959275291952239030, guid: 87f9a91c349f8034e92150ef116ddc9e, type: 3}
-  dropChance: 25
+  dropChance: 100
   lookingRight: 0
 --- !u!61 &1118559400507155275
 BoxCollider2D:

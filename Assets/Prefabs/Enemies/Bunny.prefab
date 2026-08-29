@@ -509,7 +509,7 @@ MonoBehaviour:
   attackCD: 3
   bite: {fileID: 5944128605494756527, guid: e46404b778585c44586795d880a20a65, type: 3}
   drop: {fileID: 1959275291952239030, guid: 99a6b327e1fc9fb45ba845674622a70b, type: 3}
-  dropChance: 25
+  dropChance: 100
   lookingRight: 0
   jumpDistance: 2
   chanceToRandomJump: 25

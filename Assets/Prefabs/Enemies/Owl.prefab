@@ -94,7 +94,7 @@ MonoBehaviour:
   attackCD: 1
   bite: {fileID: 5944128605494756527, guid: 2723901442b523d4e98648012833f562, type: 3}
   drop: {fileID: 1959275291952239030, guid: 89d1138b1b4f3be40a811b8fb20f17f1, type: 3}
-  dropChance: 25
+  dropChance: 100
   lookingRight: 0
   circlingDistance: 5
 --- !u!114 &5028684642912678608
