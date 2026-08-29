@@ -31,6 +31,12 @@ public class MenuControls : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void Restart()
+    {
+        UnPause();
+        SceneManager.LoadScene("MainScene");
+    }
+
     public void Exit()
     {
         SceneManager.LoadScene("MainMenuScene");

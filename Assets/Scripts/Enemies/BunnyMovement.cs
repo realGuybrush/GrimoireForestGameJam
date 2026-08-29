@@ -24,9 +24,9 @@ public class BunnyMovement : BasicEnemyMovement
             {
                 body.linearVelocity = Vector2.zero;
                 if (Random.Range(0, 100) < chanceToRandomJump)
-                    intermittentFollowPosition = RandomPosAround(jumpDistance);
+                    intermittentFollowPosition = RandomPosAround(jumpDistance) + transform.position;
                 else
-                    intermittentFollowPosition = (followPosition - transform.position).normalized * jumpDistance;
+                    intermittentFollowPosition = followPosition;
                 jumpCD = jumpLag;
             }
         } else

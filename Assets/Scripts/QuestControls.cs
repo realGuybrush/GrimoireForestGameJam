@@ -13,6 +13,9 @@ public class QuestControls : MonoBehaviour
     [SerializeField]
     private List<Quest> quests;
 
+    [SerializeField]
+    private string aggroText;
+
     private int questStep;
 
     [SerializeField]
@@ -67,11 +70,13 @@ public class QuestControls : MonoBehaviour
 
     public void TellHimISaidF___YOU()
     {
-        speechBubble.ShowMessage("Che fai? Fuck you!", true);
+        speechBubble.ShowMessage(aggroText, true);
     }
 
     public void ClearSpeech()
     {
+        if (speechBubble.HasFutureText)
+            quests[questStep].ReloadText();
         speechBubble.ShowMessage(" ", true);
     }
 

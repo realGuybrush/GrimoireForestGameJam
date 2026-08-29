@@ -36,6 +36,11 @@ public class Quest
         return finished;
     }
 
+    public void ReloadText()
+    {
+        firstTime = true;
+    }
+
     public string ItemName => item;
     
     public string Gratitude => gratitude;

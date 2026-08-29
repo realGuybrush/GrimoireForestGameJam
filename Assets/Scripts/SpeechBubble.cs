@@ -57,4 +57,6 @@ public class SpeechBubble : MonoBehaviour
             timer = disappearTimerPerSymbol * messageText.Length;   
         }
     }
+
+    public bool HasFutureText => futureMessages.Count > 0;
 }
