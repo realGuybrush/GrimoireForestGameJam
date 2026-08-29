@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private Health health;
+
+    [SerializeField]
+    private TextMeshProUGUI hpText;
     
     [SerializeField]
     private float speed;
@@ -30,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private Transform cursor;
+
+    //todo: move all spells crap in manager
+    [SerializeField]
+    private UI_SpellManager spellManager;
     
     [SerializeField]
     private List<BasicSpell> spells;
@@ -76,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
         key3.started += Handle3;
         key4.started += Handle4;
         health.OnDie += Die;
+        health.OnDamaged += UpdateHealthText;
         SetSpellCDs();
     }
     
@@ -103,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (activeSpellIndex < spells.Count && acquiredSpells[activeSpellIndex] && spellTimers[activeSpellIndex] <= 0f)
         {
+            spellManager.CastSpell(activeSpellIndex);
             armsAnimator.SetBool("Cast", true);
             spells[activeSpellIndex]?.Cast(cursor.position, transform, gameObject.GetHashCode());
             spellTimers[activeSpellIndex] = spellCDs[activeSpellIndex];
@@ -119,18 +129,22 @@ public class PlayerMovement : MonoBehaviour
     private void Handle1(InputAction.CallbackContext callbackContext)
     {
         activeSpellIndex = 0;
+        spellManager.ChooseSpell(activeSpellIndex);
     }
     private void Handle2(InputAction.CallbackContext callbackContext)
     {
         activeSpellIndex = 1;
+        spellManager.ChooseSpell(activeSpellIndex);
     }
     private void Handle3(InputAction.CallbackContext callbackContext)
     {
         activeSpellIndex = 2;
+        spellManager.ChooseSpell(activeSpellIndex);
     }
     private void Handle4(InputAction.CallbackContext callbackContext)
     {
         activeSpellIndex = 3;
+        spellManager.ChooseSpell(activeSpellIndex);
     }
 
     private void Flip()
@@ -159,7 +173,12 @@ public class PlayerMovement : MonoBehaviour
     public void GetSpell(int index)
     {
         if(index < acquiredSpells.Count)
+        {
             acquiredSpells[index] = true;
+            spellManager.ActivateSpell(index, spells[index].CD);
+            if(index == 0)
+                spellManager.ChooseSpell(index);
+        }
     }
     
     public void GetItem(ItemEnum newItem)
@@ -187,6 +206,11 @@ public class PlayerMovement : MonoBehaviour
         enabled = false;
     }
 
+    private void UpdateHealthText(float value)
+    {
+        hpText.text = Mathf.Round(value).ToString();
+    }
+
     private void OnDisable()
     {
         move.performed -= HandleMove;
@@ -198,6 +222,7 @@ public class PlayerMovement : MonoBehaviour
         key3.started -= Handle3;
         key4.started -= Handle4;
         health.OnDie -= Die;
+        health.OnDamaged -= UpdateHealthText;
         move?.Disable();
         action?.Disable();
         attack?.Disable();
