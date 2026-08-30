@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
 
     private bool invulnerable;
     
-    public event Action<float> OnDamaged = delegate { };
+    public event Action<float, bool> OnDamaged = delegate { };
     
     public event Action OnDie = delegate { };
 
@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
         if(hp <= 0)
             OnDie?.Invoke();
         if (hp > baseHP) hp = baseHP;
-        OnDamaged?.Invoke(hp);
+        OnDamaged?.Invoke(hp, damage > 0);
     }
 
     public void SetPlotArmor(bool value)

@@ -47,6 +47,9 @@ public class BasicEnemyMovement : MonoBehaviour
     [SerializeField]
     private bool lookingRight;
 
+    [SerializeField]
+    private SoundController soundController;
+
     private void Awake()
     {
         trig.OnPlayerEnter += SetPlayerIfNotHidden;
@@ -128,6 +131,7 @@ public class BasicEnemyMovement : MonoBehaviour
         if (attackTimer > 0) return;
         Instantiate(bite, transform.position, new Quaternion()).Init(followPosition - transform.position, gameObject.GetHashCode());
         attackTimer = attackCD;
+        soundController?.PlayRandom();
     }
 
     protected Vector3 RandomPosAround(float distance)

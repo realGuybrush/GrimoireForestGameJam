@@ -136,7 +136,7 @@ MonoBehaviour:
   damage: 15
   destroyOnHit: 1
   ignore: 0
-  lifeTime: 0.5
+  lifeTime: 1
   speed: 20
   body: {fileID: 4995214230355251399}
 --- !u!58 &-3498363061354751106

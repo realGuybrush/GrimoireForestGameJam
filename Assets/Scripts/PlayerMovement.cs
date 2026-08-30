@@ -57,6 +57,9 @@ public class PlayerMovement : MonoBehaviour
     private SpeechBubble speechBubble;
 
     [SerializeField]
+    private AudioSource oof;
+
+    [SerializeField]
     private Exit exit, deathBed;
 
     private void OnEnable()
@@ -210,8 +213,10 @@ public class PlayerMovement : MonoBehaviour
         enabled = false;
     }
 
-    private void UpdateHealthText(float value)
+    private void UpdateHealthText(float value, bool damaged)
     {
+        if(damaged)
+            oof.Play();
         hpText.text = Mathf.Round(value).ToString();
     }
 
