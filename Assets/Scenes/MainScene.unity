@@ -3166,23 +3166,24 @@ MonoBehaviour:
   talk: {fileID: 123795446}
   take: {fileID: 725287730}
   quests:
-  - firstText: Greetings, child. I sense you seek the way out of this forest. Don't
-      listen to whatever others say, only I know how to get out of here. I can fly,
-      after all.
+  - firstText: Greetings, child. I know what you think, but I had my reasons. You
+      see, unlike others I want to leave too, but without me the balance will be
+      broken... So I ask for your help, and in return I'll teach you to fly, and
+      we'll leave this place for good.
     secondText: 
     gratitude: 
     item: 
     questItem: 0
     finished: 0
     prize: {fileID: 0}
-  - firstText: Now, bring me a hare foot, to prove you are capable.
+  - firstText: 'Now, bring me a hare foot, to prove you are capable. '
     secondText: Did you bring the foot? Come closer and give it to me.
     gratitude: Ah, gorgeous item. Thank you.
     item: hare foot
     questItem: 2
     finished: 0
     prize: {fileID: 1535359799255520729, guid: 0ccdd1f51953ad9478b6575df216e3ba, type: 3}
-  - firstText: Now we will have to get rid of others. Bring me Cat's claw, to make
+  - firstText: Now you are ready to get rid of others. Bring me Cat's claw, to make
       sure it won't sneak on us when I teach you how to fly.
     secondText: You've got the claw?
     gratitude: Splendid! Great job!
@@ -10139,9 +10140,10 @@ MonoBehaviour:
   talk: {fileID: 1005649869}
   take: {fileID: 1268906301}
   quests:
-  - firstText: Oh, you must be the one who woke me up! Welcome! I believe you want
-      to return home, aren't you? It won't be an easy task, as kings of the forest
-      rarely allow people to escape. Take this, it will help you.
+  - firstText: Tarnation! I was supposed to guard this accursed book! You were quick
+      to open it, which gave him a perfect chance. Sorry I couldn't warn you in time,
+      these bones grow too old... I understand you want to return home, poor child.
+      Take this spell, and I will guide you on your path to freedom.
     secondText: 
     gratitude: 
     item: 

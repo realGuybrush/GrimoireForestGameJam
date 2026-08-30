@@ -32,7 +32,7 @@ public class BossMovement : MonoBehaviour
         }
         if (aggro == -1)
         {
-            //quests.ClearSpeech();
+            quests.DeleteGift();
             quests.TurnOffTriggers();
             health.SetPlotArmor(false);
             controls.enabled = true;

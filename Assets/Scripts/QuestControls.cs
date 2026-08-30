@@ -20,6 +20,8 @@ public class QuestControls : MonoBehaviour
 
     [SerializeField]
     private Transform prizeSpawn;
+
+    private GameObject spawnedGift;
     
     public event Action OnAllDone = delegate { };
 
@@ -36,7 +38,7 @@ public class QuestControls : MonoBehaviour
         if (quests[questStep].ItemName == "")
         {
             if(quests[questStep].Prize != null)
-                Instantiate(quests[questStep].Prize, prizeSpawn.position, new Quaternion());
+                spawnedGift = Instantiate(quests[questStep].Prize, prizeSpawn.position, new Quaternion()).gameObject;
             questStep++;
             if(questStep < quests.Count)
                 speechBubble.ShowMessage(quests[questStep].GetText());
@@ -52,7 +54,7 @@ public class QuestControls : MonoBehaviour
             else
                 speechBubble.ShowMessage(quests[questStep].Gratitude, true);
             if (quests[questStep].Prize != null)
-                Instantiate(quests[questStep].Prize, prizeSpawn.position, new Quaternion());
+                spawnedGift = Instantiate(quests[questStep].Prize, prizeSpawn.position, new Quaternion()).gameObject;
             questStep++;
         }
         if (questStep == quests.Count-1)
@@ -78,6 +80,11 @@ public class QuestControls : MonoBehaviour
         if (speechBubble.HasFutureText)
             quests[questStep].ReloadText();
         speechBubble.ShowMessage(" ", true);
+    }
+
+    public void DeleteGift()
+    {
+        Destroy(spawnedGift);
     }
 
     private void OnDestroy()
